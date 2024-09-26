@@ -21,8 +21,10 @@ main  {
 
 
 h1 { /* Estilo para el título h1 */
+    font-size: 4em;
     font-family: 'Playfair Display', serif; 
     font-weight:700;
+    text-align: center;
 
 .playfair-display-<uniquifier> {
   font-family: "Playfair Display", serif;
@@ -34,6 +36,7 @@ h1 { /* Estilo para el título h1 */
 }
 
 h2 { /* Estilo para subtítulos h2 */
+    font-family: 'Playfair Display', serif;
     font-size: 1.5em; /* Tamaño de fuente mediano (1.5em) */
 }
 
@@ -42,10 +45,11 @@ p { /* Estilo para párrafos p */
 }
 
 .title { /* Estilo para el elemento con clase title */
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     grid-area: title; /* Asigna este elemento al área 'title' */
     padding-left: 30px; /* Padding izquierdo de 30px (puedes ajustar esto) */
     text-align: center;
+
 }
 .texto-bajo-titulo {
     margin-top: 20px;
@@ -94,6 +98,7 @@ p { /* Estilo para párrafos p */
     margin-top: 40px; /* Margen superior */
     justify-content: center;
 }
+
 
 .proyectos a { /* Estilo para los enlaces dentro de .proyectos */
     display: block; /* El enlace ocupa toda la columna */
