@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"); /* Importa la fuente 'Open Sans' */
+
+*, html { /* Aplica a todos los elementos y al elemento html */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  font-family: 'Open Sans', sans-serif; /* Define 'Open Sans' como la fuente base */
+}
+
+html, body { /* Estilos para el html y el body */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    background-color: #f98c6d; /* Fondo claro */
+}
+
+main  {
+    display: flex; /* Cambia a flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin: 0 50px; /* Márgenes laterales */
+}
+
+
+
+h1 { /* Estilo para el título h1 */
+    font-family: 'Playfair Display', serif; 
+    font-weight:700;
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+}
+
+h2 { /* Estilo para subtítulos h2 */
+    font-size: 1.5em; /* Tamaño de fuente mediano (1.5em) */
+}
+
+p { /* Estilo para párrafos p */
+    font-size: 18px; /* Tamaño de fuente de 18px */
+}
+
+.title { /* Estilo para el elemento con clase title */
+    margin-bottom: 20px;
+    grid-area: title; /* Asigna este elemento al área 'title' */
+    padding-left: 30px; /* Padding izquierdo de 30px (puedes ajustar esto) */
+    text-align: center;
+}
+.texto-bajo-titulo {
+    margin-top: 20px;
+}
+ 
+.content { /* Estilo para el elemento con clase content */
+
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-top: 10px; /* Espacio entre el título y el texto (ajusta según sea necesario) */
+
+}
+
+.proyectos { /* Estilo para el contenedor con clase proyectos */
+    display: flex; /* Cambia a flexbox para tener más control sobre el centrado */
+    justify-content: center; /* Centra horizontalmente el contenedor de las imágenes */
+    margin-top: 40px; /* Margen superior */
+    width: 100%;
+    
+}
+
+/* Texto para las imágenes */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Efecto de desvanecimiento para las imágenes */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.proyectos nav { /* Estilo para el elemento nav dentro de .proyectos */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 40px; /* Margen superior */
+    justify-content: center;
+}
+
+.proyectos a { /* Estilo para los enlaces dentro de .proyectos */
+    display: block; /* El enlace ocupa toda la columna */
+}
+
+.proyectos nav a img { /* Estilo para las imágenes dentro de los enlaces en .proyectos */
+    width: 80%; /* La imagen ocupará todo el espacio disponible en su celda */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 5px;
+}
+
+.proyectos nav a:hover img { /* Estilo hover para las imágenes en .proyectos */
+    filter: blur(5px); /* Desenfoque de 5px al pasar el ratón */
+    opacity: 90%; /* Reducción de la opacidad al 90% */
+}
+
+button { /* Estilo para los botones */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Padding de 10px arriba y abajo, 20px a los lados */
+    background-color: rgb(215, 102, 102); /* Color de fondo gris claro */
+    font-size: 14px; /* Tamaño de fuente de 14px */
+    font-weight: bold; /* Texto en negrita */
+    color: #fffefe; /* Texto naranja */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano al pasar por encima */
+}
+
+button:hover { /* Estilo hover para los botones */
+    background-color: #d45e5e; /* Fondo cambia a naranja */
+    color: rgb(255, 255, 255); /* Texto cambia a negro */
+    font-weight: bold; /* Mantiene el texto en negrita */
+}
+
+@media (max-width: 600px) {
+    
+    .proyectos nav {
+        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    }
+    main { /* Ajustes en el elemento main */
+        display: grid; /* Activa el grid layout */
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: auto auto auto; /* Tres filas automáticas */
+        grid-template-areas: /* Reorganiza las áreas del grid */
+            "title" /* Título ocupa la primera fila */
+            "contenido" /* Contenido ocupa la segunda fila */
+            "proyectos"; /* Proyectos ocupa la tercera fila */
+        margin: 0 10px; /* Márgenes laterales reducidos a 10px */
+    }
+    
+    h1 { /* Ajustes en el título h1 */
+        font-size: 3em; /* Reduce el tamaño de fuente a 3em */
+    }
+}
+
